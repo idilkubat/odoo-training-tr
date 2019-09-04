@@ -1,3 +1,6 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_certification_user,certification.user,model_certification,base.group_user,1,1,1,1
+access_certification_employee,certification.employee,model_certification,base.group_user,1,1,1,1
 access_certification_standard_user,certification.standard.user,model_certification_standard,base.group_user,1,1,1,1
+access_certification_user,certification.user,model_certification,certification.group_certification_user,1,1,1,0
+access_certification_manager_user,certification.manager.user,model_certification,certification.group_certification_manager,1,1,1,1
+access_certification_report,certification.report,model_certification_report,base.group_user,1,1,1,1

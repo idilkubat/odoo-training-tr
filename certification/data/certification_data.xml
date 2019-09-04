@@ -1,32 +1,255 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo noupdate="1">
-    <record id="entity_demo"
-            model="res.partner">
-        <field name="name">Entity Demo</field>
-        <field name="is_certification_body">True</field>
-    </record>
+        <record id ="employee_1"
+                model="res.partner">
+            <field name="name">Karl Acar</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
-    <record id="supplier_demo"
-            model="res.partner">
-        <field name="name">Supplier Demo</field>
-        <field name="is_certification_body">False</field>
-    </record>
+        <record id ="employee_2"
+                model="res.partner">
+            <field name="name">Nuri Ak</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
+        <record id ="employee_3"
+                model="res.partner">
+            <field name="name">Ihan Baykara</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
-    <record id="standard_demo"
-            model="certification.standard">
-        <field name="name">Standard Demo</field>
-    </record>
+        <record id ="employee_4"
+                model="res.partner">
+            <field name="name">Aysel Cevdet</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
+        <record id ="employee_5"
+                model="res.partner">
+            <field name="name">Zeynep Buruk</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
-    <record id="certification_demo"
-            model="certification">
-        <field name="number">Demo Certification</field>
-        <field name="date">2019-12-31</field>
-        <field name="standard_id" eval="ref('standard_demo')"/>
-        <field name="entity_id" eval="ref('entity_demo')"/>
-        <field name="owner_id" eval="ref('supplier_demo')"/>
-    </record>
+        <record id ="employee_6"
+                model="res.partner">
+            <field name="name">Melek Atan</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
+        <record id ="employee_7"
+                model="res.partner">
+            <field name="name">Osman Atalay</field>
+            <field name="is_certification_body">False</field>
+        </record>
 
+        <record id ="employee_8"
+                model="res.partner">
+            <field name="name">Kerem Cerci</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="employee_9"
+                model="res.partner">
+            <field name="name">Elma Ceren</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="employee_10"
+                model="res.partner">
+            <field name="name">Azad Ayik</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="entity_demo_1"
+                model="res.partner">
+            <field name="name">Entity Demo</field>
+            <field name="is_certification_body">True</field>
+        </record>
+
+            <record id ="turkak"
+                model="res.partner">
+            <field name="name">TURKAK Turkish Accreditation Agency</field>
+            <field name="is_certification_body">True</field>
+        </record>
+
+        <record id ="aea"
+                model="res.partner">
+            <field name="name">AEA Quality Advantage Corporation</field>
+            <field name="is_certification_body">True</field>
+        </record>
+
+        <record id ="abs"
+                model="res.partner">
+            <field name="name">ABS Quality Evaluations</field>
+            <field name="is_certification_body">True</field>
+        </record>
+
+        <record id ="finas"
+                model="res.partner">
+            <field name="name">FINAS Finnish Accreditation Service</field>
+            <field name="is_certification_body">True</field>
+        </record>
+
+         <record id ="abc_hydraulique"
+                model="res.partner">
+            <field name="name">ABC Appareillage Banc Hydraulique</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="aerys"
+                model="res.partner">
+            <field name="name">AERYS</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="af_fasteners"
+                model="res.partner">
+            <field name="name">AF Fasteners</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="danish_aviation_systems"
+                model="res.partner">
+            <field name="name">Danish Aviation Systems</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="inespasa"
+                model="res.partner">
+            <field name="name">INESPASA</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="efinor"
+                model="res.partner">
+            <field name="name">EFINOR</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="cefival"
+                model="res.partner">
+            <field name="name">Cefival</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+        <record id ="limatech"
+                model="res.partner">
+            <field name="name">Limatech</field>
+            <field name="is_certification_body">False</field>
+        </record>
+
+         <record id ="AS9100:2015"
+                model="certification.standard">
+            <field name="name">AS9100:2015</field>
+        </record>
+
+         <record id ="AS9100:2018"
+                model="certification.standard">
+            <field name="name">AS9100:2018</field>
+        </record>
+
+         <record id ="AS9107:2018"
+                model="certification.standard">
+            <field name="name">AS9107:2018</field>
+        </record>
+
+         <record id ="AS9110:2014"
+                model="certification.standard">
+            <field name="name">AS9110:2014</field>
+        </record>
+
+         <record id ="AS9120:2016"
+                model="certification.standard">
+            <field name="name">AS9120:2016</field>
+        </record>
+
+         <record id ="AS9134:2017"
+                model="certification.standard">
+            <field name="name">AS9134:2017</field>
+        </record>
+
+         <record id ="AS9162:2015"
+                model="certification.standard">
+            <field name="name">AS9162:2015</field>
+        </record>
+
+        <record id ="certification_demo_1" model="certification">
+            <field name="number">50380</field>
+            <field name="date">2021-12-31</field>
+            <field name="standard_id" eval="ref('AS9100:2018')"/>
+            <field name="entity_id" eval="ref('aea')"/>
+            <field name="owner_id" eval="ref('cefival')"/>
+        </record>
+
+         <record id ="certification_demo_2" model="certification">
+            <field name="number">60897</field>
+            <field name="date">2019-02-05</field>
+            <field name="standard_id" eval="ref('AS9110:2014')"/>
+            <field name="entity_id" eval="ref('turkak')"/>
+            <field name="owner_id" eval="ref('limatech')"/>
+        </record>
+
+        <record id ="certification_demo_3" model="certification">
+            <field name="number">11789</field>
+            <field name="date">2020-10-01</field>
+            <field name="standard_id" eval="ref('AS9120:2016')"/>
+            <field name="entity_id" eval="ref('abs')"/>
+            <field name="owner_id" eval="ref('danish_aviation_systems')"/>
+        </record>
+
+        <record id ="certification_demo_4" model="certification">
+            <field name="number">54987</field>
+            <field name="date">2019-05-13</field>
+            <field name="standard_id" eval="ref('AS9100:2015')"/>
+            <field name="entity_id" eval="ref('aea')"/>
+            <field name="owner_id" eval="ref('abc_hydraulique')"/>
+        </record>
+
+        <record id ="certification_demo_5" model="certification">
+            <field name="number">34201</field>
+            <field name="date">2022-12-11</field>
+            <field name="standard_id" eval="ref('AS9134:2017')"/>
+            <field name="entity_id" eval="ref('turkak')"/>
+            <field name="owner_id" eval="ref('abc_hydraulique')"/>
+        </record>
+
+        <record id ="certification_demo_6" model="certification">
+            <field name="number">36984</field>
+            <field name="date">2020-08-18</field>
+            <field name="standard_id" eval="ref('AS9162:2015')"/>
+            <field name="entity_id" eval="ref('turkak')"/>
+            <field name="owner_id" eval="ref('inespasa')"/>
+        </record>
+
+        <record id ="certification_demo_7" model="certification">
+            <field name="number">67210</field>
+            <field name="date">2020-04-13</field>
+            <field name="standard_id" eval="ref('AS9120:2016')"/>
+            <field name="entity_id" eval="ref('abs')"/>
+            <field name="owner_id" eval="ref('aerys')"/>
+        </record>
+
+        <record id ="certification_demo_8" model="certification">
+            <field name="number">38415</field>
+            <field name="date">2023-03-06</field>
+            <field name="standard_id" eval="ref('AS9107:2018')"/>
+            <field name="entity_id" eval="ref('finas')"/>
+            <field name="owner_id" eval="ref('aerys')"/>
+        </record>
+
+        <record id ="certification_demo_9" model="certification">
+            <field name="number">94510</field>
+            <field name="date">2022-05-01</field>
+            <field name="standard_id" eval="ref('AS9100:2018')"/>
+            <field name="entity_id" eval="ref('aea')"/>
+            <field name="owner_id" eval="ref('af_fasteners')"/>
+        </record>
+
+        <record id ="certification_demo_10" model="certification">
+            <field name="number">51487</field>
+            <field name="date">2020-07-26</field>
+            <field name="standard_id" eval="ref('AS9107:2018')"/>
+            <field name="entity_id" eval="ref('finas')"/>
+            <field name="owner_id" eval="ref('efinor')"/>
+        </record>
 </odoo>
