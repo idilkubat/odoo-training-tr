@@ -10,11 +10,13 @@
     'license': 'AGPL-3',
     'depends': ['base'],
     'data': ['security/ir.model.access.csv',
+             'security/certification_security.xml',
              'views/certification_view.xml',
              'views/res_partner_view.xml',
              'views/standard_view.xml'
              ],
-    'demo': ['demo/certification_demo.xml'],
+
+    'demo': ['data/certification_data.xml'],
     'development_status': 'Beta',
     'maintainers': ['ceeficent']
 
