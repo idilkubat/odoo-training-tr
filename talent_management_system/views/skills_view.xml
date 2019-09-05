@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="skills_view_list" model="ir.ui.view">
+        <field name="name">Skills</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <tree string="Skills">
+                <field name="name"/>
+                <field name="level"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="skills_form" model="ir.ui.view">
+        <field name="name">Skills</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <form string="Skills">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="level"/>
+                        <field name="description"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_skills" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="res_model">skills</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            id="Skills"
+            parent="talent_menu"
+            sequence="15"
+            action="open_skills"/>
+</odoo>

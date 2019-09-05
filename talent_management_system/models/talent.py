@@ -17,10 +17,7 @@ class Talent(models.Model):
     levels = fields.Integer(compute='_compute_experience_days')
     experience = fields.Char(compute='_compute_experience_days')
     experience2 = fields.Integer(compute='_compute_experience_days')
-    skill_name = fields.Selection([('java','Java'),
-                                   ('python','Python')])
-    skill_level = fields.Selection([('beginner','Beginner'),
-                                   ('experienced','Experienced')])
+    employee_skills = fields.Many2many("skills")
 
     @api.onchange('name')
     def _onchange_email(self):

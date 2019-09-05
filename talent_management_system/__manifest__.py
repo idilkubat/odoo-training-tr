@@ -8,7 +8,8 @@
     'license': 'AGPL-3',
     'depends': ['base', 'hr'],
     'data': ['security/ir.model.access.csv',
-             'views/talent_view.xml'
+             'views/talent_view.xml',
+             'views/skills_view.xml'
              ],
 
     'demo': [''],

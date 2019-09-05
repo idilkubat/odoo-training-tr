@@ -29,13 +29,7 @@
                                 <field name="date_started"/>
                                 <field name="levels"/>
                                 <field name="experience"/>
-                            </group>
-                        </page>
-                        <page name="public" string="Skills">
-                            <group>
-
-                                <field name="skill_name"/>
-                                <field name="skill_level"/>
+                                <field name="employee_skills"/>
                             </group>
                         </page>
                     </notebook>
