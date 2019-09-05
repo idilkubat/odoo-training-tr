@@ -5,7 +5,7 @@
         <field name="model">skills</field>
         <field name="arch" type="xml">
             <tree string="Skills">
-                <field name="name"/>
+                <field name="skill_name"/>
                 <field name="level"/>
             </tree>
         </field>
@@ -18,9 +18,8 @@
             <form string="Skills">
                 <sheet>
                     <group>
-                        <field name="name"/>
+                        <field name="skill_name"/>
                         <field name="level"/>
-                        <field name="description"/>
                     </group>
                 </sheet>
             </form>

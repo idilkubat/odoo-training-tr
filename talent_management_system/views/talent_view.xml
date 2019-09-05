@@ -29,7 +29,6 @@
                                 <field name="date_started"/>
                                 <field name="levels"/>
                                 <field name="experience"/>
-                                <field name="employee_skills"/>
                             </group>
                         </page>
                     </notebook>

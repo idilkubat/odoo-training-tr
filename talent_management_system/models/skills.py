@@ -1,10 +1,9 @@
 from odoo import models,fields
 
 class Skills(models.Model):
-    _name = 'skills'
-    _description = 'Employee Skills'
+    _name = "skills"
 
-    name = fields.Char()
+    skill_name = fields.Char()
     level = fields.Selection(
         [('beginner', "Beginner"),
          ('elementary', "Elementary"),
@@ -12,4 +11,8 @@ class Skills(models.Model):
          ('upper-intermediate', "Upper-Intermediate"),
          ('advanced', "Advanced")
          ])
-    description = fields.Text()
+
+    talent_ids = fields.Many2many("talent", relation="talent_skills", column1="skills_ids", column2="talent_ids")
+
+
+

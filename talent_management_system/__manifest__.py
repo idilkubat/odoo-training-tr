@@ -9,7 +9,8 @@
     'depends': ['base', 'hr'],
     'data': ['security/ir.model.access.csv',
              'views/talent_view.xml',
-             'views/skills_view.xml'
+             'views/skills_view.xml',
+             'views/inherit_talent_view.xml'
              ],
 
     'demo': [''],
