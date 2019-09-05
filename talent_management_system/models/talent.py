@@ -16,6 +16,7 @@ class Talent(models.Model):
     date_started = fields.Date()
     levels = fields.Integer(compute='_compute_experience_days')
     experience = fields.Char(compute='_compute_experience_days')
+    experience2 = fields.Integer(compute='_compute_experience_days')
     skill_name = fields.Selection([('java','Java'),
                                    ('python','Python')])
     skill_level = fields.Selection([('beginner','Beginner'),
@@ -30,4 +31,13 @@ class Talent(models.Model):
     @api.depends('date_started')
     def _compute_experience_days(self):
         experience = relativedelta.relativedelta(datetime.date.today(), self.date_started)
+        self.experience2 = (fields.Date.today() - self.date_started).days
         self.experience = str(experience.years) + ' year(s) ' + str(experience.months) + ' month(s) ' + str(experience.days) + ' day(s)'
+
+
+        if self.experience2 > 60:
+            self.levels = 2
+        elif self.experience2 < 0:
+            self.experience2 = 0
+        else:
+            self.levels = 1
