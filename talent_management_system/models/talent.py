@@ -1,14 +1,33 @@
+import datetime
+
+from dateutil import relativedelta
+
 from odoo import models,fields,api
 
 class Talent(models.Model):
-    _name ='talent'
-    _description ='Talent List'
+    _name = "talent"
+    _description = "Talent management system"
 
-    id = fields.Many2one("hr.employee", string="ID")
-    name = fields.Many2one("hr.employee", string="Employee Name")
-    d_name = fields.Many2one("hr.department", "Department", string="Department")
-    email = fields.Many2one("res.partner", string="Email")
-    role_name = fields.Many2one("role", string="Role")
+    id = fields.Many2one("hr.employee")
+    name = fields.Many2one("hr.employee")
+    d_name = fields.Many2one("hr.department",string="Department Name")
+    email = fields.Char()
+    role_name = fields.Char()
+    date_started = fields.Date()
+    levels = fields.Integer(compute='_compute_experience_days')
+    experience = fields.Char(compute='_compute_experience_days')
+    skill_name = fields.Selection([('java','Java'),
+                                   ('python','Python')])
+    skill_level = fields.Selection([('beginner','Beginner'),
+                                   ('experienced','Experienced')])
 
+    @api.onchange('name')
+    def _onchange_email(self):
+        self.email = self.name.work_email
+        self.d_name = self.name.department_id
+        self.role_name = self.name.job_id.name
 
-
+    @api.depends('date_started')
+    def _compute_experience_days(self):
+        experience = relativedelta.relativedelta(datetime.date.today(), self.date_started)
+        self.experience = str(experience.years) + ' year(s) ' + str(experience.months) + ' month(s) ' + str(experience.days) + ' day(s)'

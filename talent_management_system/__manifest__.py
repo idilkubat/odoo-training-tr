@@ -6,7 +6,7 @@
     'category': 'Certification Management',
     'version': '12.0.1.0.0',
     'license': 'AGPL-3',
-    'depends': ['base'],
+    'depends': ['base', 'hr'],
     'data': ['security/ir.model.access.csv',
              'views/talent_view.xml'
              ],
