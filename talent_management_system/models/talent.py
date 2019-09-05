@@ -1,7 +1,3 @@
-import datetime
-
-from dateutil import relativedelta
-
 from odoo import models,fields,api
 
 class Talent(models.Model):
@@ -15,10 +11,8 @@ class Talent(models.Model):
     role_name = fields.Char()
     date_started = fields.Date()
     levels = fields.Integer(compute='_compute_experience_days')
-    experience = fields.Char(compute='_compute_experience_days')
-    experience2 = fields.Integer(compute='_compute_experience_days')
+    experience = fields.Integer(compute='_compute_experience_days')
     skill_ids = fields.Many2many("skills", relation="talent_skills", column1="talent_ids", column2="skills_ids")
-
 
     @api.onchange('name')
     def _onchange_email(self):
@@ -28,14 +22,14 @@ class Talent(models.Model):
 
     @api.depends('date_started')
     def _compute_experience_days(self):
-        experience = relativedelta.relativedelta(datetime.date.today(), self.date_started)
-        self.experience2 = (fields.Date.today() - self.date_started).days
-        self.experience = str(experience.years) + ' year(s) ' + str(experience.months) + ' month(s) ' + str(experience.days) + ' day(s)'
+        if self.date_started:
+            self.experience = (fields.Date.today() - self.date_started).days
+
+            if self.experience > 60:
+                self.levels = 2
+            elif self.experience < 0:
+                self.experience = 0
+            else:
+                self.levels = 1
 
 
-        if self.experience2 > 60:
-            self.levels = 2
-        elif self.experience2 < 0:
-            self.experience2 = 0
-        else:
-            self.levels = 1
